@@ -1,4 +1,4 @@
-# PHP LVM - PHP Linux VPN Manager
+# PHP LVM - PHP LINUX VPN MANAGER
 
 ![PHP LVM Banner](banner.png)
 
