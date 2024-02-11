@@ -23,7 +23,7 @@ PHP LVM is a powerful open-source tool designed to simplify the management of VP
 
 PHP LVM requires the following components to be installed on your system:
 
-- **PHP**: PHP 7.4 or later is recommended.
+- **PHP**: PHP 8.1 or later is recommended.
 
 - **Composer**: The PHP dependency manager is required to install PHP LVM.
 
