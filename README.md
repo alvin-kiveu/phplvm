@@ -1,6 +1,6 @@
 # PHP LVM - PHP LINUX VPN MANAGER
 
-![PHP LVM Banner](banner.png)
+![PHP LVM Banner](public/images/banner.png)
 
 
 PHP LVM is a powerful open-source tool designed to simplify the management of VPNs on Linux systems. Whether you're using OpenVPN, PPTP, L2TP, or other VPN protocols, PHP LVM streamlines the setup and configuration process, making it easier than ever to secure your connections.

@@ -94,7 +94,7 @@
                             <div class="card-block">
                                 <div class="row m-b-20">
                                     <div class="col-md-12">
-                                        <h3 class="text-center txt-primary">UBUNTU VPN MANAGER</h3>
+                                        <h3 class="text-center txt-primary">PHP LINUX VPN MANAGER</h3>
                                     </div>
                                 </div>
                                 <p class="text-muted text-center p-b-5">Sign in with your regular account</p>
