@@ -8,7 +8,7 @@ class VpnConttroller extends Controller
 {
     public function showVPN()
     {
-        $pptpInstalled = $this->isPackageInstalled('pptp');
+        $pptpInstalled = $this->isPackageInstalled('pptpd');
         $l2tpInstalled = $this->isPackageInstalled('l2tp');
         $openvpnInstalled = $this->isPackageInstalled('openvpn');
         $sstpInstalled = $this->isPackageInstalled('sstp');
