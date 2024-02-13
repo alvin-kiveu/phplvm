@@ -143,12 +143,15 @@
                                     </li>
 
                                     <?php
+                                    use App\Models\User;
+                                    use App\Models\Menu;
                                     $username = session()->get('username');
                                     $userdata = User::where('username', $username)->first();
                                     $role = $userdata->role;
                                     $commonMenuItems = Menu::getCommonMenuItems();
                                     if ($role === 'admin') {
                                         foreach ($commonMenuItems as $menuItem) {
+                                            if (!isset($menuItem['submenu'])) {
                                             ?>
                                     <li class="">
                                         <a href="<?= $menuItem['url'] ?>" class="waves-effect waves-dark">
@@ -159,16 +162,8 @@
                                         </a>
                                     </li>
                                     <?php
-                                        }
-                                    } else {
-                                        // Output menu items based on permissions
-                                        $permissions = Role::where('name', $role)->value('permissions');
-                                        $decodedPermissions = json_decode($permissions, true);
-
-                                        foreach ($decodedPermissions as $permission => $value) {
-                                            if ($value !== null && array_key_exists($permission, $commonMenuItems)) {
-                                                $menuItem = $commonMenuItems[$permission];
-                                                ?>
+                                            } else {
+                                            ?>
                                     <li class="pcoded-hasmenu">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon">

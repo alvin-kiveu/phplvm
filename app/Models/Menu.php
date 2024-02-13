@@ -14,6 +14,11 @@ class Menu extends Model
                 'url' => 'vpn',
             ],
             [
+                'text' => 'My Addon',
+                'icon' => 'feather icon-box',
+                'url' => 'myaddon',
+            ],
+            [
                 'text' => 'User Management',
                 'icon' => 'feather icon-users',
                 'submenu' => [

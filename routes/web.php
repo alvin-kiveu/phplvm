@@ -6,6 +6,7 @@ use App\Http\Controllers\InstallController;
 use App\Http\Controllers\VpnConttroller;
 use App\Http\Controllers\VpnMangerController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

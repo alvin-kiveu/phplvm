@@ -27,14 +27,14 @@
                         <td>{{ $client->username }}</td>
                         <td>{{ $client->password }}</td>
                         <td>{{ $client->ipaddress }}</td>
-                        <td>
+                        {{-- <td>
                             <a href="/ppptclientedit/{{ $client->id }}" class="btn btn-primary">
                                 <i class="fa fa-edit"></i>
                             </a>
                             <a href="/pptpclientdelete/{{ $client->id }}" class="btn btn-danger">
                                 <i class="fa fa-trash"></i>
                             </a>
-                        </td>
+                        </td> --}}
 
                     </tr>
                     @endforeach
