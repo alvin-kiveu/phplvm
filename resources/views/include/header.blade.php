@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-    <title>EMPLOYEE MANAGEMENT SYSTEM</title>
+    <title>PHP LVM</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="/dist/bower_components/chartist/css/chartist.css" type="text/css" media="all">
     <link rel="stylesheet" type="text/css" href="/dist/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="/dist/assets/css/widget.css">
+    <link rel="stylesheet" type="text/css" href="/dist/assets/pages/notification/notification.css">
+    <link rel="stylesheet" type="text/css" href="/dist/bower_components/animate.css/css/animate.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif !important;
@@ -45,7 +47,7 @@
                     <div class="navbar-logo">
                         <a href="/dashboard">
                             <div class="img-fluid text-center text-white text-bold">
-                                EMPLOYEE MANAGEMENT
+                                PHP LVM
                             </div>
                         </a>
                         <a class="mobile-menu" id="mobile-collapse" href="#!">
@@ -136,27 +138,13 @@
                                             <span class="pcoded-mtext">Dashboard</span>
                                         </a>
                                     </li>
-
-                                    <li class="pcoded-hasmenu">
-                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <li class="">
+                                        <a href="vpn" class="waves-effect waves-dark">
                                             <span class="pcoded-micon">
-                                                <i class="feather icon-users"></i>
+                                                <i class="feather icon-shield"></i>
                                             </span>
-                                            <span class="pcoded-mtext">Employee Management</span>
+                                            <span class="pcoded-mtext">VPN</span>
                                         </a>
-                                        <ul class="pcoded-submenu">
-                                            <li class>
-                                                <a href="default/widget-statistic.html"
-                                                    class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Add Employee</span>
-                                                </a>
-                                            </li>
-                                            <li class>
-                                                <a href="default/widget-data.html" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">View Employees</span>
-                                                </a>
-                                            </li>
-                                        </ul>
                                     </li>
 
                                     <li class="pcoded-hasmenu">
@@ -164,45 +152,38 @@
                                             <span class="pcoded-micon">
                                                 <i class="feather icon-users"></i>
                                             </span>
-                                            <span class="pcoded-mtext">Payroll Management</span>
+                                            <span class="pcoded-mtext">PPTP Management</span>
                                         </a>
                                         <ul class="pcoded-submenu">
-                                            <li class>
-                                                <a href="default/widget-statistic.html"
-                                                    class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Payroll Processing</span>
+                                            <li>
+                                                <a href="addppptp" class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">Add PPTP Client</span>
                                                 </a>
                                             </li>
-                                            <li class>
-                                                <a href="default/widget-data.html" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Proccessed Payrolls</span>
+                                            <li>
+                                                <a href="viewppptp" class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">View PPTP User</span>
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
 
-                                    <li class="pcoded-hasmenu">
+                                    {{-- <li class="pcoded-hasmenu">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon">
-                                                <i class="feather icon-layers"></i>
+                                                <i class="feather icon-users"></i>
                                             </span>
-                                            <span class="pcoded-mtext">Recruitment Management</span>
+                                            <span class="pcoded-mtext">L2TP Management</span>
                                         </a>
                                         <ul class="pcoded-submenu">
-                                            <li class>
-                                                <a href="default/widget-statistic.html"
-                                                    class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Add New Job</span>
+                                            <li>
+                                                <a href="addl2tp" class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">Add L2TP Client</span>
                                                 </a>
                                             </li>
-                                            <li class>
-                                                <a href="default/widget-data.html" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">View Jobs</span>
-                                                </a>
-                                            </li>
-                                            <li class>
-                                                <a href="default/widget-data.html" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Pending Applications</span>
+                                            <li>
+                                                <a href="viewl2tp" class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">View L2TP User</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -213,85 +194,44 @@
                                             <span class="pcoded-micon">
                                                 <i class="feather icon-users"></i>
                                             </span>
-                                            <span class="pcoded-mtext">Attendance Management</span>
+                                            <span class="pcoded-mtext">OpenVPN Management</span>
                                         </a>
                                         <ul class="pcoded-submenu">
-                                            <li class>
-                                                <a href="default/widget-statistic.html"
-                                                    class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Add New Attendance</span>
+                                            <li>
+                                                <a href="addopenvpn" class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">Add OpenVPN Client</span>
                                                 </a>
                                             </li>
-                                            <li class>
-                                                <a href="default/widget-data.html" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">View Attendance</span>
+                                            <li>
+                                                <a href="viewopenvpn" class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">View OpenVPN User</span>
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
+
 
                                     <li class="pcoded-hasmenu">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon">
                                                 <i class="feather icon-users"></i>
                                             </span>
-                                            <span class="pcoded-mtext">Perfomance Appraisal</span>
+                                            <span class="pcoded-mtext">SSTP Management</span>
                                         </a>
                                         <ul class="pcoded-submenu">
-
-                                        </ul>
-                                    </li>
-
-                                    <li class="pcoded-hasmenu">
-                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon">
-                                                <i class="feather icon-users"></i>
-                                            </span>
-                                            <span class="pcoded-mtext">Analytics and Reports</span>
-                                        </a>
-                                        <ul class="pcoded-submenu">
-                                            {{-- <li class>
-                                                <a href="default/widget-statistic.html"
-                                                    class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">
+                                            <li>
+                                                <a href="addsstp" class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">Add SSTP CLIENT</span>
                                                 </a>
                                             </li>
-                                            <li class>
-                                                <a href="default/widget-data.html" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">View Attendance</span>
-                                                </a>
-                                            </li> --}}
-                                        </ul>
-                                    </li>
-
-
-
-                                    <li class="pcoded-hasmenu">
-                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon">
-                                                <i class="feather icon-layers"></i>
-                                            </span>
-                                            <span class="pcoded-mtext">Leave Management</span>
-                                        </a>
-                                        <ul class="pcoded-submenu">
-                                            <li class>
-                                                <a href="default/widget-statistic.html"
-                                                    class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Add New Leave</span>
-                                                </a>
-                                            </li>
-                                            <li class>
-                                                <a href="default/widget-data.html" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">View Leaves</span>
-                                                </a>
-                                            </li>
-                                            <li class>
-                                                <a href="default/widget-data.html" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Pending Leaves</span>
+                                            <li>
+                                                <a href="viewsstp" class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext">View SSTP User</span>
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
+ --}}
 
 
                                     <li class="pcoded-hasmenu">
@@ -303,20 +243,17 @@
                                         </a>
                                         <ul class="pcoded-submenu">
                                             <li class>
-                                                <a href="/role/add"
-                                                    class="waves-effect waves-dark">
+                                                <a href="/role/add" class="waves-effect waves-dark">
                                                     <span class="pcoded-mtext">Add Role</span>
                                                 </a>
                                             </li>
                                             <li class>
-                                                <a href="/role/list"
-                                                    class="waves-effect waves-dark">
+                                                <a href="/role/list" class="waves-effect waves-dark">
                                                     <span class="pcoded-mtext">Roles
                                                 </a>
                                             </li>
                                             <li class>
-                                                <a href="/user/add"
-                                                    class="waves-effect waves-dark">
+                                                <a href="/user/add" class="waves-effect waves-dark">
                                                     <span class="pcoded-mtext">Add User</span>
                                                 </a>
                                             </li>

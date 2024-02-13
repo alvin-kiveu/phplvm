@@ -28,18 +28,8 @@
                                         @foreach($decodedPermissions as $permission => $value)
                                             @if($value !== null)
                                                 <span class="badge badge-success mr-1">
-                                                    @if($permission == 'employee_management')
-                                                        Employee Management
-                                                    @elseif($permission == 'leave_management')
-                                                        Leave Management
-                                                    @elseif($permission == 'payroll_management')
-                                                        Payroll Management
-                                                    @elseif($permission == 'attendance_management')
-                                                        Attendance Management
-                                                    @elseif($permission == 'analytics_reports')
-                                                        Analytics & Reports
-                                                    @elseif($permission == 'recruitment')
-                                                        Recruitment
+                                                    @if($permission == 'vpn_management')
+                                                        VPN Management
                                                     @elseif($permission == 'user_management')
                                                         User Management
                                                     @endif

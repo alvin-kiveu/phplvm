@@ -35,43 +35,8 @@
                                                         <div class="border-checkbox-group border-checkbox-group-success">
                                                             <input class="border-checkbox" type="checkbox" id="checkbox1"
                                                                 name="employee_management" checked>
-                                                            <label class="border-checkbox-label" for="checkbox1">Employee
+                                                            <label class="border-checkbox-label" for="checkbox1">VPN
                                                                 Management</label>
-                                                        </div>
-                                                    @elseif($permission == 'leave_management')
-                                                        <div class="border-checkbox-group">
-                                                            <input class="border-checkbox" type="checkbox" id="checkbox2"
-                                                                name="leave_management" checked>
-                                                            <label class="border-checkbox-label" for="checkbox2">Leave
-                                                                Management</label>
-                                                        </div>
-                                                    @elseif($permission == 'payroll_management')
-                                                        <div class="border-checkbox-group border-checkbox-group-success">
-                                                            <input class="border-checkbox" type="checkbox" id="checkbox3"
-                                                                name="payroll_management" checked>
-                                                            <label class="border-checkbox-label" for="checkbox3">Payroll
-                                                                Management</label>
-                                                        </div>
-                                                    @elseif($permission == 'attendance_management')
-                                                        <div class="border-checkbox-group border-checkbox-group-success">
-                                                            <input class="border-checkbox" type="checkbox" id="checkbox4"
-                                                                name="attendance_management" checked>
-                                                            <label class="border-checkbox-label" for="checkbox4">Attendance
-                                                                Management</label>
-                                                        </div>
-                                                    @elseif($permission == 'analytics_reports')
-                                                        <div class="border-checkbox-group border-checkbox-group-success">
-                                                            <input class="border-checkbox" type="checkbox" id="checkbox5"
-                                                                name="analytics_reports" checked>
-                                                            <label class="border-checkbox-label" for="checkbox5">Analytics &
-                                                                Reports</label>
-                                                        </div>
-                                                    @elseif($permission == 'recruitment')
-                                                        <div class="border-checkbox-group border-checkbox-group-success">
-                                                            <input class="border-checkbox" type="checkbox" id="checkbox6"
-                                                                name="recruitment" checked>
-                                                            <label class="border-checkbox-label"
-                                                                for="checkbox6">Recruitment</label>
                                                         </div>
                                                     @elseif($permission == 'user_management')
                                                         <div class="border-checkbox-group border-checkbox-group-success">
@@ -88,43 +53,8 @@
                                                         <div class="border-checkbox-group border-checkbox-group-danger">
                                                             <input class="border-checkbox" type="checkbox" id="checkbox1"
                                                                 name="employee_management">
-                                                            <label class="border-checkbox-label" for="checkbox1">Employee
+                                                            <label class="border-checkbox-label" for="checkbox1">VPN
                                                                 Management</label>
-                                                        </div>
-                                                    @elseif($permission == 'leave_management')
-                                                        <div class="border-checkbox-group border-checkbox-group-danger">
-                                                            <input class="border-checkbox" type="checkbox" id="checkbox2"
-                                                                name="leave_management">
-                                                            <label class="border-checkbox-label" for="checkbox2">Leave
-                                                                Management</label>
-                                                        </div>
-                                                    @elseif($permission == 'payroll_management')
-                                                        <div class="border-checkbox-group border-checkbox-group-danger">
-                                                            <input class="border-checkbox" type="checkbox" id="checkbox3"
-                                                                name="payroll_management">
-                                                            <label class="border-checkbox-label" for="checkbox3">Payroll
-                                                                Management</label>
-                                                        </div>
-                                                    @elseif($permission == 'attendance_management')
-                                                        <div class="border-checkbox-group border-checkbox-group-danger">
-                                                            <input class="border-checkbox" type="checkbox" id="checkbox4"
-                                                                name="attendance_management">
-                                                            <label class="border-checkbox-label" for="checkbox4">Attendance
-                                                                Management</label>
-                                                        </div>
-                                                    @elseif($permission == 'analytics_reports')
-                                                        <div class="border-checkbox-group border-checkbox-group-danger">
-                                                            <input class="border-checkbox" type="checkbox" id="checkbox5"
-                                                                name="analytics_reports">
-                                                            <label class="border-checkbox-label" for="checkbox5">Analytics &
-                                                                Reports</label>
-                                                        </div>
-                                                    @elseif($permission == 'recruitment')
-                                                        <div class="border-checkbox-group border-checkbox-group-danger">
-                                                            <input class="border-checkbox" type="checkbox" id="checkbox6"
-                                                                name="recruitment">
-                                                            <label class="border-checkbox-label"
-                                                                for="checkbox6">Recruitment</label>
                                                         </div>
                                                     @elseif($permission == 'user_management')
                                                         <div class="border-checkbox-group border-checkbox-group-danger">
