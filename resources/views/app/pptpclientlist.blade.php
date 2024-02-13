@@ -22,7 +22,7 @@
                     <tr>
                         @foreach ($clients as $client)
                     <tr>
-                        <td>{{ $client->iteration }}</td>
+                        <td>{{ $loop->iteration }}</td>
                         <td>{{ $client->name }}</td>
                         <td>{{ $client->username }}</td>
                         <td>{{ $client->password }}</td>
