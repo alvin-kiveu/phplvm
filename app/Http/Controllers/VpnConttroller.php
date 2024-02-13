@@ -18,9 +18,8 @@ class VpnConttroller extends Controller
 
     private function isPackageInstalled($packageName)
     {
-        $command = "dpkg-query -l $packageName";
-        $output = shell_exec($command);
-        return strpos($output, 'ii') !== false;
+        $output = shell_exec("dpkg -s $packageName 2>&1");
+        return strpos($output, "Status: install ok installed") !== false;
     }
 
     public function installPPTP(Request $request)
@@ -73,7 +72,6 @@ class VpnConttroller extends Controller
 
     private function configureL2TP(Request $request)
     {
-
     }
 
 
@@ -83,6 +81,5 @@ class VpnConttroller extends Controller
 
     private function configureSSTP(Request $request)
     {
-
     }
 }

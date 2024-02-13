@@ -13,10 +13,6 @@
                     <p>Status: Installed <i class="feather icon-check-circle text-success"></i></p>
                 @else
                     <p>Status: Not Installed <i class="feather icon-x-circle text-danger"></i></p>
-                    <form action="/install-pptp" method="post">
-                        @csrf
-                        <button class="btn btn-primary">Install <?php echo $pptpInstalled; ?></button>
-                    </form>
                 @endif
             </div>
         </div>
@@ -34,10 +30,6 @@
                     <p>Status: Installed <i class="feather icon-check-circle text-success"></i></p>
                 @else
                     <p>Status: Not Installed <i class="feather icon-x-circle text-danger"></i></p>
-                    <form action="/install-l2tp" method="post">
-                        @csrf
-                        <button class="btn btn-primary">Install</button>
-                    </form>
                 @endif
             </div>
         </div>
@@ -56,10 +48,6 @@
                     <p>Status: Installed <i class="feather icon-check-circle text-success"></i></p>
                 @else
                     <p>Status: Not Installed <i class="feather icon-x-circle text-danger"></i></p>
-                    <form action="/install-openvpn" method="post">
-                        @csrf
-                        <button class="btn btn-primary">Install</button>
-                    </form>
                 @endif
             </div>
         </div>
@@ -77,11 +65,6 @@
                     <p>Status: Installed <i class="feather icon-check-circle text-success"></i></p>
                 @else
                     <p>Status: Not Installed <i class="feather icon-x-circle text-danger"></i></p>
-                    <form action="/install-sstp" method="post">
-                        @csrf
-                        <button class="btn btn-primary">Install</button>
-                    </form>
-
                 @endif
             </div>
         </div>
