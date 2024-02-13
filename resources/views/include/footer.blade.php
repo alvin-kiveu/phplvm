@@ -42,6 +42,9 @@
 <script src="/dist/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 <script src="/dist/assets/pages/data-table/js/data-table-custom.js"></script>
 
+<script src="/dist/assets/pages/foo-table/js/footable.min.js"></script>
+<script src="/dist/assets/pages/foo-table/js/foo-table-custom.js"></script>
+
 </body>
 </body>
 

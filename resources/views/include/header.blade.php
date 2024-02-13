@@ -25,6 +25,9 @@
     <link rel="stylesheet" type="text/css" href="/dist/assets/css/widget.css">
     <link rel="stylesheet" type="text/css" href="/dist/assets/pages/notification/notification.css">
     <link rel="stylesheet" type="text/css" href="/dist/bower_components/animate.css/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/dist/assets/pages/foo-table/css/footable.bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/dist/assets/pages/foo-table/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="/dist/assets/pages/foo-table/css/footable.standalone.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif !important;
