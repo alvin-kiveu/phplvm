@@ -8,7 +8,6 @@
                     <h5>Ubuntu Information</h5>
                 </div>
                 <div class="card-body">
-                    <!-- Add your Ubuntu information content here -->
                     <p>Version: {{ php_uname('v') }}</p>
                     <p>Kernel version: {{ php_uname('r') }}</p>
                     <p>Machine type: {{ php_uname('m') }}</p>
@@ -19,16 +18,12 @@
                     <p>Node name: {{ php_uname('n') }}</p>
                     <p>Processor identifier: {{ php_uname('i') }}</p>
                     <p>Architecture: {{ php_uname('m') }}</p>
-                    <!-- Add more information as needed -->
                 </div>
             </div>
         </div>
 
 
-        <div class="col-xl-12 col-md-12">
-
-
-
+        <div class="col-xl-12 col-md-6">
             <div class="col-xl-12 col-md-12">
                 <div class="card table-card">
                     <div class="card-header">
