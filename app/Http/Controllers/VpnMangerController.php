@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Client;
 
 class VpnMangerController extends Controller
 {
@@ -40,5 +41,11 @@ class VpnMangerController extends Controller
         } else {
             return  redirect()->back()->with('error', 'IP Address already exists');
         }
+    }
+
+    public function viewPPTP()
+    {
+        $clients = Client::where('type', 'PPTP')->get();
+        return view('app.pptpclientlist', compact('clients'));
     }
 }

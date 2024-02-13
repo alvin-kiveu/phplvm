@@ -37,6 +37,9 @@ Route::middleware('web', 'check.installation')->group(function () {
 
                     Route::post('/pptpclientadd', [VpnMangerController::class, 'addPPTP']);
                     Route::get('/pptpclientlist', [VpnMangerController::class, 'showPPTP']);
+                    Route::get('/pptpclientdelete/{id}', [VpnMangerController::class, 'deletePPTP']);
+                    Route::get('/pptpclientedit/{id}', [VpnMangerController::class, 'editPPTP']);
+                    Route::post('/viewppptp', [VpnMangerController::class, 'viewPPTP']);
 
                     Route::get('/vpn', [VpnConttroller::class, 'showVPN'])->name('app.vpn');
                     Route::post('install-pptp', [VpnConttroller::class, 'installPPTP']);
