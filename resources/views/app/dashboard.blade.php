@@ -23,7 +23,7 @@
         </div>
 
 
-        <div class="col-xl-12 col-md-6">
+        <div class="col-md-6">
             <div class="col-xl-12 col-md-12">
                 <div class="card table-card">
                     <div class="card-header">
@@ -78,5 +78,5 @@
             </div>
 
 
-        </div>
+     </div>
     @endsection
