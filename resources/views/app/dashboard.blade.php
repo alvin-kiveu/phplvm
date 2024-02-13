@@ -38,7 +38,7 @@
                                     $clients = Client::all();
                                     foreach ($clients as $client) {
                                         echo "<tr>";
-                                        echo "<td>{$loop->iteration }</td>";
+                                        echo "<td>{{ $loop->iteration }}</td>";
                                         echo "<td>{$client->name}</td>";
                                         echo "<td>{$client->username}</td>";
                                         echo "<td>{$client->password}</td>";
