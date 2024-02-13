@@ -29,22 +29,24 @@
                                         <th data-breakpoints="xs">Username</th>
                                         <th data-breakpoints="xs">Password</th>
                                         <th data-breakpoints="xs">IP Address</th>
-                                        <th data-breakpoints="xs sm md">Type<th>
+                                        <th data-breakpoints="xs sm md">Type</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     use App\Models\Client;
                                     $clients = Client::all();
+                                    $counter = 1; // Initialize a counter variable
                                     foreach ($clients as $client) {
                                         echo "<tr>";
-                                        echo "<td>{{ $loop->iteration }}</td>";
+                                        echo "<td>" . $counter . "</td>"; // Output the counter
                                         echo "<td>{$client->name}</td>";
                                         echo "<td>{$client->username}</td>";
                                         echo "<td>{$client->password}</td>";
                                         echo "<td>{$client->ip_address}</td>";
                                         echo "<td>{$client->type}</td>";
                                         echo "</tr>";
+                                        $counter++; // Increment the counter
                                     }
                                     ?>
                                 </tbody>
