@@ -2,8 +2,8 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h5>Filtering</h5>
-            <span>Include filtering in your FooTable.</span>
+            <h5>PPTP Clients</h5>
+            <span>All PPTP Clients</span>
         </div>
         <div class="card-block">
             <div class="table-responsive dt-responsive">
