@@ -19,6 +19,20 @@ class Menu extends Model
                 'url' => 'myaddon',
             ],
             [
+                'text' => 'PPPTP Management',
+                'icon' => 'feather icon-shield',
+                'submenu' => [
+                    [
+                        'text' => 'Add PPPTP',
+                        'url' => '/addppptp',
+                    ],
+                    [
+                        'text' => 'View PPPTP',
+                        'url' => '/viewppptp',
+                    ],
+                ],
+            ],
+            [
                 'text' => 'User Management',
                 'icon' => 'feather icon-users',
                 'submenu' => [
@@ -40,20 +54,6 @@ class Menu extends Model
                     ],
                 ],
             ],
-            [
-                'text' => 'PPPTP Management',
-                'icon' => 'feather icon-shield',
-                'submenu' => [
-                    [
-                        'text' => 'Add PPPTP',
-                        'url' => '/addppptp',
-                    ],
-                    [
-                        'text' => 'View PPPTP',
-                        'url' => '/viewppptp',
-                    ],
-                ],
-            ]
         ];
     }
 }
