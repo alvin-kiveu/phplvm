@@ -6,7 +6,8 @@
             <span>Include filtering in your FooTable.</span>
         </div>
         <div class="card-block">
-            <table id="demo-foo-filtering" class="table table-striped">
+            <div class="table-responsive dt-responsive">
+                <table id="dom-jqry" class="table table-striped table-bordered nowrap">
                 <thead>
                     <tr>
                         <th>N0</th>
@@ -40,6 +41,7 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
     </div>
 @endsection
