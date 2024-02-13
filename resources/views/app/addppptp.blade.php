@@ -28,8 +28,8 @@
 
                         <div class="form-group col-md-6">
                             <label for="employeeName">Password</label>
-                            <input type="text" class="form-control" id="clientpassword" name="clientpassword"
-                                placeholder="Username" required>
+                            <input type="password" class="form-control" id="clientpassword" name="clientpassword"
+                                placeholder="Password" required>
                         </div>
 
 
