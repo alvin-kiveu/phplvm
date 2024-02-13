@@ -48,4 +48,5 @@ class VpnMangerController extends Controller
         $clients = Client::where('type', 'PPTP')->get();
         return view('app.pptpclientlist', compact('clients'));
     }
+
 }

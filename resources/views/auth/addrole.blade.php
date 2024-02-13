@@ -24,7 +24,7 @@
                             <div class="col-sm-10">
                                 <div class="border-checkbox-section">
                                     <div class="border-checkbox-group border-checkbox-group-success">
-                                        <input class="border-checkbox" type="checkbox" id="checkbox1" name="employee_management">
+                                        <input class="border-checkbox" type="checkbox" id="checkbox1" name="vpn_management">
                                         <label class="border-checkbox-label" for="checkbox1">VPN Management</label>
                                     </div>
 

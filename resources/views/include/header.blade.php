@@ -26,8 +26,8 @@
     <link rel="stylesheet" type="text/css" href="/dist/assets/pages/notification/notification.css">
     <link rel="stylesheet" type="text/css" href="/dist/bower_components/animate.css/css/animate.css">
     <link rel="stylesheet" type="text/css" href="/dist/assets/pages/foo-table/css/footable.bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/dist/assets/pages/foo-table/css/jquery.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="/dist/assets/pages/foo-table/css/footable.standalone.min.css">
+    <link rel="stylesheet" type="text/css" href="/dist/assets/pages/foo-table/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/dist/assets/pages/foo-table/css/footable.standalone.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif !important;
@@ -141,132 +141,61 @@
                                             <span class="pcoded-mtext">Dashboard</span>
                                         </a>
                                     </li>
+
+                                    <?php
+                                    $username = session()->get('username');
+                                    $userdata = User::where('username', $username)->first();
+                                    $role = $userdata->role;
+                                    $commonMenuItems = Menu::getCommonMenuItems();
+                                    if ($role === 'admin') {
+                                        foreach ($commonMenuItems as $menuItem) {
+                                            ?>
                                     <li class="">
-                                        <a href="vpn" class="waves-effect waves-dark">
+                                        <a href="<?= $menuItem['url'] ?>" class="waves-effect waves-dark">
                                             <span class="pcoded-micon">
-                                                <i class="feather icon-shield"></i>
+                                                <i class="<?= $menuItem['icon'] ?>"></i>
                                             </span>
-                                            <span class="pcoded-mtext">VPN</span>
+                                            <span class="pcoded-mtext"><?= $menuItem['text'] ?></span>
                                         </a>
                                     </li>
+                                    <?php
+                                        }
+                                    } else {
+                                        // Output menu items based on permissions
+                                        $permissions = Role::where('name', $role)->value('permissions');
+                                        $decodedPermissions = json_decode($permissions, true);
 
+                                        foreach ($decodedPermissions as $permission => $value) {
+                                            if ($value !== null && array_key_exists($permission, $commonMenuItems)) {
+                                                $menuItem = $commonMenuItems[$permission];
+                                                ?>
                                     <li class="pcoded-hasmenu">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon">
-                                                <i class="feather icon-users"></i>
+                                                <i class="<?= $menuItem['icon'] ?>"></i>
                                             </span>
-                                            <span class="pcoded-mtext">PPTP Management</span>
+                                            <span class="pcoded-mtext"><?= $menuItem['text'] ?></span>
                                         </a>
                                         <ul class="pcoded-submenu">
-                                            <li>
-                                                <a href="addppptp" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Add PPTP Client</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="viewppptp" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">View PPTP User</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    {{-- <li class="pcoded-hasmenu">
-                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon">
-                                                <i class="feather icon-users"></i>
-                                            </span>
-                                            <span class="pcoded-mtext">L2TP Management</span>
-                                        </a>
-                                        <ul class="pcoded-submenu">
-                                            <li>
-                                                <a href="addl2tp" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Add L2TP Client</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="viewl2tp" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">View L2TP User</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="pcoded-hasmenu">
-                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon">
-                                                <i class="feather icon-users"></i>
-                                            </span>
-                                            <span class="pcoded-mtext">OpenVPN Management</span>
-                                        </a>
-                                        <ul class="pcoded-submenu">
-                                            <li>
-                                                <a href="addopenvpn" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Add OpenVPN Client</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="viewopenvpn" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">View OpenVPN User</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-
-                                    <li class="pcoded-hasmenu">
-                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon">
-                                                <i class="feather icon-users"></i>
-                                            </span>
-                                            <span class="pcoded-mtext">SSTP Management</span>
-                                        </a>
-                                        <ul class="pcoded-submenu">
-                                            <li>
-                                                <a href="addsstp" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Add SSTP CLIENT</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="viewsstp" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">View SSTP User</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
- --}}
-
-
-                                    <li class="pcoded-hasmenu">
-                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon">
-                                                <i class="feather icon-users"></i>
-                                            </span>
-                                            <span class="pcoded-mtext">User Management</span>
-                                        </a>
-                                        <ul class="pcoded-submenu">
+                                            <?php foreach ($menuItem['submenu'] as $subItem) { ?>
                                             <li class>
-                                                <a href="/role/add" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Add Role</span>
+                                                <a href="<?= $subItem['url'] ?>" class="waves-effect waves-dark">
+                                                    <span class="pcoded-mtext"><?= $subItem['text'] ?></span>
                                                 </a>
                                             </li>
-                                            <li class>
-                                                <a href="/role/list" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Roles
-                                                </a>
-                                            </li>
-                                            <li class>
-                                                <a href="/user/add" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">Add User</span>
-                                                </a>
-                                            </li>
-                                            <li class>
-                                                <a href="/user/list" class="waves-effect waves-dark">
-                                                    <span class="pcoded-mtext">View Users</span>
-                                                </a>
-                                            </li>
+                                            <?php } ?>
                                         </ul>
                                     </li>
+                                    <?php
+                                            }
+                                        }
+                                    }
+                                    ?>
+
+
+
+
+
 
                                     <li class>
                                         <a href="/auth/logout" class="waves-effect waves-dark">

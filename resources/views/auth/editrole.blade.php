@@ -34,7 +34,7 @@
                                                     @if ($permission == 'employee_management')
                                                         <div class="border-checkbox-group border-checkbox-group-success">
                                                             <input class="border-checkbox" type="checkbox" id="checkbox1"
-                                                                name="employee_management" checked>
+                                                                name="vpn_management" checked>
                                                             <label class="border-checkbox-label" for="checkbox1">VPN
                                                                 Management</label>
                                                         </div>
@@ -49,10 +49,10 @@
                                                 </span>
                                             @else
                                                 <span class="badge mr-1">
-                                                    @if ($permission == 'employee_management')
+                                                    @if ($permission == 'vpn_management')
                                                         <div class="border-checkbox-group border-checkbox-group-danger">
                                                             <input class="border-checkbox" type="checkbox" id="checkbox1"
-                                                                name="employee_management">
+                                                                name="vpn_management">
                                                             <label class="border-checkbox-label" for="checkbox1">VPN
                                                                 Management</label>
                                                         </div>
