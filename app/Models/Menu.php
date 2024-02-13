@@ -40,6 +40,20 @@ class Menu extends Model
                     ],
                 ],
             ],
+            [
+                'text' => 'PPPTP Management',
+                'icon' => 'feather icon-shield',
+                'submenu' => [
+                    [
+                        'text' => 'Add PPPTP',
+                        'url' => '/addppptp',
+                    ],
+                    [
+                        'text' => 'View PPPTP',
+                        'url' => '/viewppptp',
+                    ],
+                ],
+            ]
         ];
     }
 }
