@@ -15,7 +15,7 @@
                     <p>Status: Not Installed <i class="feather icon-x-circle text-danger"></i></p>
                     <form action="/install-pptp" method="post">
                         @csrf
-                        <button class="btn btn-primary">Install</button>
+                        <button class="btn btn-primary">Install <?php echo $pptpInstalled; ?></button>
                     </form>
                 @endif
             </div>
